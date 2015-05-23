@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vcu-Kb-xmt">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RecordSoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -38,11 +38,8 @@
                                 <state key="normal" title="Done">
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="177" y="504" width="46" height="30"/>
-                                </variation>
                                 <connections>
-                                    <segue destination="vaD-eG-7TI" kind="show" id="VxC-0I-VOD"/>
+                                    <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fC9-xt-esT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,15 +62,15 @@
                                 <exclude reference="hAb-uj-0D5"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="iVm-0H-QOx"/>
-                                <exclude reference="vtu-qR-pN2"/>
+                                <exclude reference="NyD-MH-7Xy"/>
+                                <exclude reference="e4a-74-nsV"/>
                                 <exclude reference="Twz-0R-Z6z"/>
                                 <exclude reference="vA5-Li-z4t"/>
                                 <exclude reference="ONr-dW-0kg"/>
                                 <exclude reference="azY-JG-jIj"/>
                                 <exclude reference="lr4-1c-2EV"/>
-                                <exclude reference="NyD-MH-7Xy"/>
-                                <exclude reference="e4a-74-nsV"/>
+                                <exclude reference="iVm-0H-QOx"/>
+                                <exclude reference="vtu-qR-pN2"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -83,15 +80,15 @@
                                 <include reference="hAb-uj-0D5"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="iVm-0H-QOx"/>
-                                <include reference="vtu-qR-pN2"/>
+                                <exclude reference="NyD-MH-7Xy"/>
+                                <include reference="e4a-74-nsV"/>
                                 <include reference="Twz-0R-Z6z"/>
                                 <include reference="vA5-Li-z4t"/>
                                 <exclude reference="ONr-dW-0kg"/>
                                 <include reference="azY-JG-jIj"/>
                                 <exclude reference="lr4-1c-2EV"/>
-                                <exclude reference="NyD-MH-7Xy"/>
-                                <include reference="e4a-74-nsV"/>
+                                <include reference="iVm-0H-QOx"/>
+                                <include reference="vtu-qR-pN2"/>
                             </mask>
                         </variation>
                     </view>
@@ -100,6 +97,7 @@
                         <outlet property="recordButton" destination="pxk-k5-aFW" id="frV-Fz-TCO"/>
                         <outlet property="recordingInProgress" destination="hRy-O5-EIU" id="xuW-Dz-GLi"/>
                         <outlet property="stopButton" destination="hAb-uj-0D5" id="3cN-Fa-kJi"/>
+                        <segue destination="vaD-eG-7TI" kind="show" identifier="stopRecording" id="VIZ-Xi-uQD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -123,9 +121,6 @@
                                 <state key="normal" image="SlowPlayButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="37" y="103" width="67" height="69"/>
-                                </variation>
                                 <connections>
                                     <action selector="playSlowly:" destination="vaD-eG-7TI" eventType="touchUpInside" id="2I9-gG-7hk"/>
                                 </connections>
@@ -135,9 +130,6 @@
                                 <state key="normal" image="stopButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="175" y="460" width="50" height="70"/>
-                                </variation>
                                 <connections>
                                     <action selector="stopPlaying:" destination="vaD-eG-7TI" eventType="touchUpInside" id="ga5-Tb-QQv"/>
                                 </connections>
@@ -147,9 +139,6 @@
                                 <state key="normal" image="FastPlayButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="298" y="103" width="65" height="65"/>
-                                </variation>
                                 <connections>
                                     <action selector="playFast:" destination="vaD-eG-7TI" eventType="touchUpInside" id="F08-vM-mqQ"/>
                                 </connections>
@@ -174,15 +163,15 @@
                                 <exclude reference="t08-ey-n92"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="S7s-x4-xQQ"/>
+                                <exclude reference="gCj-nN-X6F"/>
+                                <exclude reference="07w-hF-7bs"/>
+                                <exclude reference="EfR-Yf-tlb"/>
+                                <exclude reference="TRG-kP-zDU"/>
                                 <exclude reference="6KX-sv-25l"/>
                                 <exclude reference="Ims-ck-4IP"/>
                                 <exclude reference="0op-db-SAZ"/>
                                 <exclude reference="YNm-OH-Nh4"/>
-                                <exclude reference="07w-hF-7bs"/>
-                                <exclude reference="EfR-Yf-tlb"/>
-                                <exclude reference="TRG-kP-zDU"/>
-                                <exclude reference="S7s-x4-xQQ"/>
-                                <exclude reference="gCj-nN-X6F"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -192,15 +181,15 @@
                                 <include reference="t08-ey-n92"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="S7s-x4-xQQ"/>
+                                <exclude reference="gCj-nN-X6F"/>
+                                <exclude reference="07w-hF-7bs"/>
+                                <include reference="EfR-Yf-tlb"/>
+                                <exclude reference="TRG-kP-zDU"/>
                                 <include reference="6KX-sv-25l"/>
                                 <include reference="Ims-ck-4IP"/>
                                 <include reference="0op-db-SAZ"/>
                                 <include reference="YNm-OH-Nh4"/>
-                                <exclude reference="07w-hF-7bs"/>
-                                <include reference="EfR-Yf-tlb"/>
-                                <exclude reference="TRG-kP-zDU"/>
-                                <include reference="S7s-x4-xQQ"/>
-                                <exclude reference="gCj-nN-X6F"/>
                             </mask>
                         </variation>
                     </view>

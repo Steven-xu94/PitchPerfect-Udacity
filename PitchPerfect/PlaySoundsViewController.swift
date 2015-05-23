@@ -12,6 +12,7 @@ import AVFoundation
 class PlaySoundsViewController: UIViewController {
 
     private var audioPlayer: AVAudioPlayer!
+    var receivedAudio: RecordedAudio!
     
     private func playWithRate(rate: float_t) {
         audioPlayer.stop()
@@ -24,12 +25,7 @@ class PlaySoundsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if var path = NSBundle.mainBundle().pathForResource("Sh-Boom", ofType: "m4a") {
-            var url = NSURL.fileURLWithPath(path)
-            audioPlayer = AVAudioPlayer(contentsOfURL: url, error: nil)
-        } else {
-            println("File not found")
-        }
+        audioPlayer = AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl, error: nil)
     }
 
     override func didReceiveMemoryWarning() {
