@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B074D33F1B10CF7600984B0A /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B074D33E1B10CF7600984B0A /* PlaySoundsViewController.swift */; };
+		B074D3471B10E6A100984B0A /* Sh-Boom.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B074D3461B10E6A100984B0A /* Sh-Boom.m4a */; };
 		B0E226AC1B1051B600DD9578 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E226AB1B1051B600DD9578 /* AppDelegate.swift */; };
 		B0E226AE1B1051B600DD9578 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E226AD1B1051B600DD9578 /* ViewController.swift */; };
 		B0E226B11B1051B600DD9578 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E226AF1B1051B600DD9578 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B074D33E1B10CF7600984B0A /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		B074D3461B10E6A100984B0A /* Sh-Boom.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sh-Boom.m4a"; sourceTree = "<group>"; };
 		B0E226A61B1051B600DD9578 /* PitchPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E226AA1B1051B600DD9578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0E226AB1B1051B600DD9578 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 				B0E226AB1B1051B600DD9578 /* AppDelegate.swift */,
 				B0E226AD1B1051B600DD9578 /* ViewController.swift */,
 				B0E226AF1B1051B600DD9578 /* Main.storyboard */,
+				B074D33E1B10CF7600984B0A /* PlaySoundsViewController.swift */,
 				B0E226B21B1051B600DD9578 /* Images.xcassets */,
 				B0E226B41B1051B600DD9578 /* LaunchScreen.xib */,
 				B0E226A91B1051B600DD9578 /* Supporting Files */,
@@ -91,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				B0E226AA1B1051B600DD9578 /* Info.plist */,
+				B074D3461B10E6A100984B0A /* Sh-Boom.m4a */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B074D3471B10E6A100984B0A /* Sh-Boom.m4a in Resources */,
 				B0E226B11B1051B600DD9578 /* Main.storyboard in Resources */,
 				B0E226B61B1051B600DD9578 /* LaunchScreen.xib in Resources */,
 				B0E226B31B1051B600DD9578 /* Images.xcassets in Resources */,
@@ -213,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0E226AE1B1051B600DD9578 /* ViewController.swift in Sources */,
+				B074D33F1B10CF7600984B0A /* PlaySoundsViewController.swift in Sources */,
 				B0E226AC1B1051B600DD9578 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,7 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PitchPerfect/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -352,7 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PitchPerfect/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -411,6 +419,7 @@
 				B0E226C71B1051B600DD9578 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0E226C81B1051B600DD9578 /* Build configuration list for PBXNativeTarget "PitchPerfectTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +428,7 @@
 				B0E226CA1B1051B600DD9578 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

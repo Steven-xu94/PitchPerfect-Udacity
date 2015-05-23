@@ -29,16 +29,14 @@ class ViewController: UIViewController {
         // hide stop button
         stopButton.hidden = true;
         recordButton.enabled = true;
-        
     }
 
     @IBAction func recordAudio(sender: UIButton) {
         stopButton.hidden = false;
-        // show text "Recording in progress" when button clicked
+        // show text "Recording in progress" when clicked
         recordingInProgress.hidden = false;
         // TODO: Record
         recordButton.enabled = false;
-        
     }
     
     @IBAction func stopRecording(sender: UIButton) {
