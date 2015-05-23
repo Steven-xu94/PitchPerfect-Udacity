@@ -11,8 +11,10 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
 
-    private var audioPlayer: AVAudioPlayer!
     var receivedAudio: RecordedAudio!
+    private var audioPlayer: AVAudioPlayer!
+    private var audioEngine: AVAudioEngine!
+    private var audioFile: AVAudioFile!
     
     private func playWithRate(rate: float_t) {
         audioPlayer.stop()
@@ -26,6 +28,8 @@ class PlaySoundsViewController: UIViewController {
         super.viewDidLoad()
 
         audioPlayer = AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl, error: nil)
+        audioEngine = AVAudioEngine()
+        audioFile = AVAudioFile(forReading: receivedAudio.filePathUrl, error: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,6 +46,35 @@ class PlaySoundsViewController: UIViewController {
         playWithRate(1.5)
     }
     
+    func playAudioWithPitch(pitch: Float) {
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+        
+        var audioPlayerNode = AVAudioPlayerNode()
+        audioEngine.attachNode(audioPlayerNode)
+        
+        var changePitchEffect = AVAudioUnitTimePitch()
+        changePitchEffect.pitch = pitch
+        audioEngine.attachNode(changePitchEffect)
+        
+        audioEngine.connect(audioPlayerNode, to: changePitchEffect, format: nil)
+        audioEngine.connect(changePitchEffect, to: audioEngine.outputNode, format: nil)
+        
+        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        audioEngine.startAndReturnError(nil)
+        audioPlayerNode.play()
+    }
+    
+    
+    @IBAction func playChipmunkAudio(sender: UIButton) {
+        playAudioWithPitch(1000)
+    }
+    
+    
+    @IBAction func playDarthVaderAudio(sender: UIButton) {
+        playAudioWithPitch(-1000)
+    }
     
     @IBAction func stopPlaying(sender: AnyObject) {
         audioPlayer.stop()
