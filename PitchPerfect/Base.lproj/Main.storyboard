@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vcu-Kb-xmt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vcu-Kb-xmt">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -36,7 +36,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAb-uj-0D5">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Done">
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fC9-xt-esT"/>
@@ -191,12 +191,10 @@
                                 <exclude reference="6bi-yb-aDA"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="6KX-sv-25l"/>
-                                <exclude reference="Ims-ck-4IP"/>
-                                <exclude reference="0op-db-SAZ"/>
-                                <exclude reference="YNm-OH-Nh4"/>
-                                <exclude reference="RZc-7L-2no"/>
+                                <exclude reference="S7s-x4-xQQ"/>
+                                <exclude reference="gCj-nN-X6F"/>
                                 <exclude reference="v35-iQ-zN1"/>
+                                <exclude reference="RZc-7L-2no"/>
                                 <exclude reference="07w-hF-7bs"/>
                                 <exclude reference="EfR-Yf-tlb"/>
                                 <exclude reference="Fuf-3A-Qcr"/>
@@ -204,8 +202,10 @@
                                 <exclude reference="RI2-Gv-2Ux"/>
                                 <exclude reference="TRG-kP-zDU"/>
                                 <exclude reference="mar-nP-jJZ"/>
-                                <exclude reference="S7s-x4-xQQ"/>
-                                <exclude reference="gCj-nN-X6F"/>
+                                <exclude reference="6KX-sv-25l"/>
+                                <exclude reference="Ims-ck-4IP"/>
+                                <exclude reference="0op-db-SAZ"/>
+                                <exclude reference="YNm-OH-Nh4"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -217,12 +217,10 @@
                                 <include reference="6bi-yb-aDA"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="6KX-sv-25l"/>
-                                <include reference="Ims-ck-4IP"/>
-                                <include reference="0op-db-SAZ"/>
-                                <include reference="YNm-OH-Nh4"/>
-                                <include reference="RZc-7L-2no"/>
+                                <include reference="S7s-x4-xQQ"/>
+                                <exclude reference="gCj-nN-X6F"/>
                                 <include reference="v35-iQ-zN1"/>
+                                <include reference="RZc-7L-2no"/>
                                 <exclude reference="07w-hF-7bs"/>
                                 <include reference="EfR-Yf-tlb"/>
                                 <exclude reference="Fuf-3A-Qcr"/>
@@ -230,8 +228,10 @@
                                 <include reference="RI2-Gv-2Ux"/>
                                 <exclude reference="TRG-kP-zDU"/>
                                 <exclude reference="mar-nP-jJZ"/>
-                                <include reference="S7s-x4-xQQ"/>
-                                <exclude reference="gCj-nN-X6F"/>
+                                <include reference="6KX-sv-25l"/>
+                                <include reference="Ims-ck-4IP"/>
+                                <include reference="0op-db-SAZ"/>
+                                <include reference="YNm-OH-Nh4"/>
                             </mask>
                         </variation>
                     </view>
