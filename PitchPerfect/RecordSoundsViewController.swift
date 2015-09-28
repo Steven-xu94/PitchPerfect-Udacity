@@ -40,25 +40,23 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         stopButton.hidden = false;
         recordingInProgress.hidden = false;
         recordButton.enabled = false;
-        
-        let dest = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
+
+        let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
         let currentDateTime = NSDate()
         let formatter = NSDateFormatter()
         formatter.dateFormat = "MMddyyyy-HHmmss"
         let recordingName = formatter.stringFromDate(currentDateTime) + ".wav"
-        let path = [dest + recordingName]
-        let filePath = NSURL.fileURLWithPathComponents(path)
+        let filePath = documentsURL.URLByAppendingPathComponent(recordingName)
         print(filePath)
-        
+
         // setup audio session
         let session = AVAudioSession.sharedInstance()
         do {
             try session.setCategory(AVAudioSessionCategoryPlayAndRecord)
         } catch _ {
         }
-        
         // initialize recorder
-        audioRecorder = try? AVAudioRecorder(URL: filePath!, settings: [:])
+        audioRecorder = try? AVAudioRecorder(URL: filePath, settings: [:])
         audioRecorder.delegate = self
         audioRecorder.meteringEnabled = true
         audioRecorder.prepareToRecord()
